@@ -1,0 +1,22 @@
+<button class="btn btn-danger" (click)="goToAlta()">Nuevo registro</button>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Edad</th>
+        <th scope="col">Fecha Nacimiento</th>
+        <th scope="col">Fecha Inscripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let f of list; let i = index">
+        <th scope="row">{{f.nombre}}</th>
+        <th scope="row">{{f.edad}}</th>
+        <th scope="row">{{f.fecha_nacimiento}}</th>
+        <th scope="row">{{f.fecha_inscripcion}}</th>
+        <th scope="row"><button type="button" class="btn btn-success" (click)="editar(f)">Editar</button> / 
+            <button type="button" class="btn btn-danger" (click)="eliminar(f.id)">Eliminar</button></th>
+      </tr>
+
+    </tbody>
+  </table>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, Route } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pruebaAbisoft';
+  constructor(
+    private router: Router
+  ){
+
+  }
+
+  goToAlta(){
+    console.log('Hola')
+    this.router.navigate(['alta']);
+  }
 }

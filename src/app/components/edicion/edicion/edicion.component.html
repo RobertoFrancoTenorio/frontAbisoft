@@ -1,0 +1,24 @@
+<form class="container" [formGroup]="formulario">
+    <br>
+    <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" class="form-control" formControlName="nombre">
+    </div>
+    <div class="form-group">
+        <label>Edad</label>
+        <input type="text" class="form-control" formControlName="edad">
+    </div>
+    <div class="form-group">
+        <label>Fecha de Nacimiento</label>
+        <input type="date" class="form-control" formControlName="fecha_nacimiento">
+    </div>
+    <div class="form-group">
+        <label>Fecha de Inscripción</label>
+        <input type="date" class="form-control" formControlName="fecha_inscripcion">
+    </div>
+    <div class="form-group">
+        <label>Costo</label>
+        <input (keypress)="numberOnly($event)" type="text" class="form-control" formControlName="costo">
+    </div>
+    <button type="submit" (click)="editarFormulario(formulario)" class="btn btn-primary">Enviar</button>
+</form>
